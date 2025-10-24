@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Polish Development Foundation — Surgery Robotic — Nonprofit Health & Outreach</title>
+  <meta name="description" content="Polish Development Foundation — Surgery Robotic is a nonprofit supporting access to advanced surgical care, patient assistance, and public health outreach." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial; }
+    .container { max-width: 1120px; }
+    .brand { background: linear-gradient(135deg, #0ea5e9, #6366f1); }
+    .shadow-soft { box-shadow: 0 10px 30px rgba(2,6,23,.08); }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+    <nav class="container mx-auto flex items-center justify-between px-4 py-3">
+      <a href="#home" class="flex items-center gap-3 font-semibold text-slate-900">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl brand text-white">PD</span>
+        <span>Polish Development Foundation — Surgery Robotic</span>
+      </a>
+      <button id="navToggle" class="lg:hidden p-2 rounded-lg border border-slate-200">
+        <span class="sr-only">Menu</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" /></svg>
+      </button>
+      <ul id="navLinks" class="hidden lg:flex items-center gap-6 text-sm">
+        <li><a href="#about" class="hover:text-slate-900">About</a></li>
+        <li><a href="#programs" class="hover:text-slate-900">Programs</a></li>
+        <li><a href="#impact" class="hover:text-slate-900">Impact</a></li>
+        <li><a href="#gallery" class="hover:text-slate-900">Gallery</a></li>
+        <li><a href="#contact" class="hover:text-slate-900">Contact</a></li>
+        <li><a href="#donate" class="inline-flex items-center rounded-lg bg-slate-900 px-3 py-2 text-white hover:opacity-90">Donate</a></li>
+      </ul>
+    </nav>
+    <div id="mobileMenu" class="hidden border-t border-slate-200 bg-white lg:hidden">
+      <div class="container mx-auto px-4 py-3">
+        <ul class="grid gap-3 text-sm">
+          <li><a class="block py-2" href="#about">About</a></li>
+          <li><a class="block py-2" href="#programs">Programs</a></li>
+          <li><a class="block py-2" href="#impact">Impact</a></li>
+          <li><a class="block py-2" href="#gallery">Gallery</a></li>
+          <li><a class="block py-2" href="#contact">Contact</a></li>
+          <li><a class="block py-2 font-semibold text-slate-900" href="#donate">Donate</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="container mx-auto grid items-center gap-10 px-4 py-16 lg:grid-cols-2 lg:py-24">
+      <div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-slate-900">Access to Advanced Care, Compassion for Everyone</h1>
+        <p class="mt-4 text-slate-600 text-base sm:text-lg">We support patients with access to innovative surgical technology, financial assistance, and community outreach. Together we reduce barriers to treatment.</p>
+        <div class="mt-6 flex flex-wrap items-center gap-3">
+          <a href="#donate" class="inline-flex items-center rounded-xl bg-slate-900 px-5 py-3 text-white shadow-soft">Donate by Email</a>
+          <a href="#contact" class="inline-flex items-center rounded-xl border border-slate-300 px-5 py-3">Contact us</a>
+        </div>
+        <div class="mt-6 text-xs text-slate-500">Warsaw • Wołomin • Patients & families first</div>
+      </div>
+      <div>
+        <div class="relative rounded-2xl bg-white shadow-soft p-2 border border-slate-100 overflow-hidden">
+          <div id="heroSlider" class="relative h-72 sm:h-96">
+            <img class="absolute inset-0 h-full w-full object-cover rounded-xl" alt="Medical staff assisting patient" src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?q=80&w=1600&auto=format&fit=crop" />
+            <img class="absolute inset-0 h-full w-full object-cover rounded-xl opacity-0" alt="Volunteer handing meals" src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1600&auto=format&fit=crop" />
+            <img class="absolute inset-0 h-full w-full object-cover rounded-xl opacity-0" alt="Community health outreach" src="https://images.unsplash.com/photo-1504439904031-93ded9f93e4e?q=80&w=1600&auto=format&fit=crop" />
+          </div>
+          <button id="prevHero" class="absolute left-3 top-1/2 -translate-y-1/2 grid place-items-center h-9 w-9 rounded-full bg-white/80 border border-slate-200"><svg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M15 19l-7-7 7-7'/></svg></button>
+          <button id="nextHero" class="absolute right-3 top-1/2 -translate-y-1/2 grid place-items-center h-9 w-9 rounded-full bg-white/80 border border-slate-200"><svg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M9 5l7 7-7 7'/></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-16 lg:py-24">
+    <div class="container mx-auto px-4 grid gap-10 lg:grid-cols-2">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-bold">About the Foundation</h2>
+        <p class="mt-4 text-slate-600">Polish Development Foundation — Surgery Robotic is an independent nonprofit focused on: (1) patient navigation for advanced surgical care, (2) hardship grants for low-income families, and (3) public education & prevention.</p>
+        <ul class="mt-6 grid gap-3 text-slate-700 text-sm">
+          <li>• Registered nonprofit (example placeholder)</li>
+          <li>• Transparent use of funds, audited annually</li>
+          <li>• Partnerships with hospitals & community groups</li>
+        </ul>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="rounded-2xl bg-white p-6 border border-slate-200 shadow-soft">
+          <div class="text-3xl font-extrabold">3</div>
+          <div class="mt-1 text-sm text-slate-600">Core Programs</div>
+        </div>
+        <div class="rounded-2xl bg-white p-6 border border-slate-200 shadow-soft">
+          <div class="text-3xl font-extrabold">120+</div>
+          <div class="mt-1 text-sm text-slate-600">Beneficiaries / year (sample)</div>
+        </div>
+        <div class="rounded-2xl bg-white p-6 border border-slate-200 shadow-soft">
+          <div class="text-3xl font-extrabold">18</div>
+          <div class="mt-1 text-sm text-slate-600">Volunteers</div>
+        </div>
+        <div class="rounded-2xl bg-white p-6 border border-slate-200 shadow-soft">
+          <div class="text-3xl font-extrabold">10</div>
+          <div class="mt-1 text-sm text-slate-600">Partner clinics</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs -->
+  <section id="programs" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl sm:text-3xl font-bold">Programs</h2>
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="rounded-2xl border border-slate-200 p-6 bg-slate-50 shadow-soft">
+          <h3 class="font-semibold text-lg">Patient Navigation</h3>
+          <p class="mt-2 text-sm text-slate-600">Guidance and support for families seeking advanced surgical care.</p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 p-6 bg-slate-50 shadow-soft">
+          <h3 class="font-semibold text-lg">Hardship Grants</h3>
+          <p class="mt-2 text-sm text-slate-600">Small grants for travel, medication, and recovery essentials.</p>
+        </article>
+        <article class="rounded-2xl border border-slate-200 p-6 bg-slate-50 shadow-soft">
+          <h3 class="font-semibold text-lg">Public Health Outreach</h3>
+          <p class="mt-2 text-sm text-slate-600">Community screenings, awareness talks, and prevention drives.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact -->
+  <section id="impact" class="py-16 lg:py-24">
+    <div class="container mx-auto px-4">
+      <div class="rounded-3xl bg-slate-900 text-white p-8 md:p-12 shadow-soft">
+        <h2 class="text-2xl sm:text-3xl font-bold">Your Support, Real Impact</h2>
+        <p class="mt-3 text-slate-200">Numbers below are examples. Replace with real annual data.</p>
+        <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div><div class="text-4xl font-extrabold">82%</div><div class="mt-1 text-sm text-slate-300">Funds to programs</div></div>
+          <div><div class="text-4xl font-extrabold">75</div><div class="mt-1 text-sm text-slate-300">Patients assisted</div></div>
+          <div><div class="text-4xl font-extrabold">14</div><div class="mt-1 text-sm text-slate-300">Community events</div></div>
+          <div><div class="text-4xl font-extrabold">9</div><div class="mt-1 text-sm text-slate-300">Active partners</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl sm:text-3xl font-bold">Gallery</h2>
+      <p class="mt-3 text-slate-600">Royalty-free images for nonprofit & healthcare context. Replace with your real photos.</p>
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <figure class="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 shadow-soft">
+          <img class="h-56 w-full object-cover" alt="Volunteer serving meals" src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1600&auto=format&fit=crop"/>
+          <figcaption class="p-4 text-sm text-slate-700">Volunteers serving warm meals to people in need.</figcaption>
+        </figure>
+        <figure class="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 shadow-soft">
+          <img class="h-56 w-full object-cover" alt="Man drinking clean water" src="https://images.unsplash.com/photo-1451174969898-1f92a98c2bcd?q=80&w=1600&auto=format&fit=crop"/>
+          <figcaption class="p-4 text-sm text-slate-700">Access to clean drinking water.</figcaption>
+        </figure>
+        <figure class="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 shadow-soft">
+          <img class="h-56 w-full object-cover" alt="Healthcare team" src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?q=80&w=1600&auto=format&fit=crop"/>
+          <figcaption class="p-4 text-sm text-slate-700">Healthcare teams supporting patients.</figcaption>
+        </figure>
+        <figure class="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 shadow-soft">
+          <img class="h-56 w-full object-cover" alt="Community clinic" src="https://images.unsplash.com/photo-1504439904031-93ded9f93e4e?q=80&w=1600&auto=format&fit=crop"/>
+          <figcaption class="p-4 text-sm text-slate-700">Community outreach and screenings.</figcaption>
+        </figure>
+        <figure class="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 shadow-soft">
+          <img class="h-56 w-full object-cover" alt="Medicine and care" src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1600&auto=format&fit=crop"/>
+          <figcaption class="p-4 text-sm text-slate-700">Medication support & essentials.</figcaption>
+        </figure>
+        <figure class="rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 shadow-soft">
+          <img class="h-56 w-full object-cover" alt="Volunteers with boxes" src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?q=80&w=1600&auto=format&fit=crop"/>
+          <figcaption class="p-4 text-sm text-slate-700">Delivering aid to vulnerable families.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donate -->
+  <section id="donate" class="py-16 lg:py-24">
+    <div class="container mx-auto px-4">
+      <div class="grid gap-10 lg:grid-cols-2">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold">Donate</h2>
+          <p class="mt-3 text-slate-600">Prefer donating by email? Send us a message and we’ll provide the simplest option for you. This keeps the site easy to host on GitHub Pages (no backend needed).</p>
+          <ul class="mt-5 grid gap-2 text-sm text-slate-700">
+            <li>• Email for donations: <a class="text-sky-700" href="mailto:middleway1122@gmail.com?subject=Donation%20to%20Robotic%20Care%20Foundation">middleway1122@gmail.com</a></li>
+            <li>• Or use the quick form → it opens your email client with pre‑filled details.</li>
+          </ul>
+          <div class="mt-6">
+            <a class="inline-flex items-center rounded-xl bg-slate-900 px-5 py-3 text-white" href="mailto:middleway1122@gmail.com?subject=I%20want%20to%20donate&body=Hello%20Robotic%20Care%20Foundation%2C%0A%0AI%20would%20like%20to%20make%20a%20donation.%20Please%20share%20the%20best%20method.%0A%0AName%3A%0AAmount%3A%0APurpose%3A%0A%0AThank%20you!">Donate via Email</a>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+          <h3 class="font-semibold">Quick Email Form (no backend)</h3>
+          <p class="mt-2 text-sm text-slate-600">This form crafts an email link so you can send directly to <strong>middleway1122@gmail.com</strong>.</p>
+          <form id="donationForm" class="mt-4 grid gap-3">
+            <input class="rounded-lg border border-slate-300 px-3 py-2" type="text" id="donorName" placeholder="Your name" required>
+            <input class="rounded-lg border border-slate-300 px-3 py-2" type="text" id="donationAmount" placeholder="Amount (PLN / EUR)" required>
+            <input class="rounded-lg border border-slate-300 px-3 py-2" type="text" id="purpose" placeholder="Purpose (e.g., patient support)">
+            <button class="rounded-lg bg-slate-900 px-4 py-2 text-white" type="submit">Create Email</button>
+          </form>
+          <p class="mt-3 text-xs text-slate-500">Tip: To accept online payments later, connect a third‑party like Stripe/PayPal and link a payment page here.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl sm:text-3xl font-bold">Contact us</h2>
+      <div class="mt-6 grid gap-8 lg:grid-cols-2">
+        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-soft">
+          <div class="text-sm text-slate-600">Phone / WhatsApp</div>
+          <div class="mt-1 font-medium">+48 508 340 151</div>
+          <div class="mt-4 text-sm text-slate-600">Address</div>
+          <div class="mt-1 font-medium">Apartment I, 5th apartment, 05-200 Wołomin, Poland</div>
+          <div class="mt-4 text-sm text-slate-600">Email</div>
+          <div class="mt-1 font-medium text-sky-700">middleway1122@gmail.com</div>
+          <div class="mt-4 text-sm text-slate-600">Secretariat</div>
+          <div class="mt-1 font-medium">Opening hours 9.00 – 16.00</div>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+          <h3 class="font-semibold">Message us</h3>
+          <p class="mt-2 text-sm text-slate-600">This button opens your email with the recipient and subject pre‑filled.</p>
+          <a class="mt-4 inline-flex items-center rounded-xl bg-slate-900 px-5 py-3 text-white" href="mailto:middleway1122@gmail.com?subject=Contact%20request%20from%20website">Email the Secretariat</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="container mx-auto px-4 py-8 text-sm text-slate-600 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+      <div>© <span id="year"></span> Polish Development Foundation — Surgery Robotic. All rights reserved.</div>
+      <div class="flex items-center gap-4">
+        <a class="underline" href="#about">About</a>
+        <a class="underline" href="#contact">Contact</a>
+        <a class="underline" href="#donate">Donate</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const navToggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    navToggle?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Hero slider
+    (function(){
+      const slider = document.getElementById('heroSlider');
+      if(!slider) return;
+      const slides = Array.from(slider.querySelectorAll('img'));
+      let i = 0;
+      const show = idx => slides.forEach((img, k)=> img.style.opacity = (k===idx? '1':'0'));
+      show(0);
+      const next = ()=>{ i = (i+1)%slides.length; show(i); };
+      const prev = ()=>{ i = (i-1+slides.length)%slides.length; show(i); };
+      const timer = setInterval(next, 4000);
+      document.getElementById('nextHero')?.addEventListener('click', next);
+      document.getElementById('prevHero')?.addEventListener('click', prev);
+      slider.addEventListener('mouseenter', ()=> clearInterval(timer));
+    })();
+    // Donation quick form → mailto
+    const form = document.getElementById('donationForm');
+    form?.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById('donorName').value.trim());
+      const amount = encodeURIComponent(document.getElementById('donationAmount').value.trim());
+      const purpose = encodeURIComponent(document.getElementById('purpose').value.trim());
+      const subject = 'Donation to Polish Development Foundation — Surgery Robotic';
+      const body = `Hello Polish Development Foundation — Surgery Robotic,%0A%0A`+
+                   `I would like to donate.%0A`+
+                   `Name: ${name}%0A`+
+                   `Amount: ${amount}%0A`+
+                   `Purpose: ${purpose}%0A%0A`+
+                   `Thank you!`;
+      window.location.href = `mailto:middleway1122@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
